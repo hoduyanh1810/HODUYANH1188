@@ -1,0 +1,18 @@
+@model BTH.Models.Calculator
+
+@{
+    ViewData["Title"] = "Kết quả";
+}
+
+<h2>Kết quả tính toán</h2>
+
+<p><strong>Số thứ nhất:</strong> @Model.Number1</p>
+<p><strong>Số thứ hai:</strong> @Model.Number2</p>
+<p><strong>Phép tính:</strong> 
+    @(Model.Operation == "add" ? "Cộng" :
+      Model.Operation == "sub" ? "Trừ" :
+      Model.Operation == "mul" ? "Nhân" : "Chia")
+</p>
+<p><strong>Kết quả:</strong> @Model.Result</p>
+
+<a asp-action="Index">Quay lại</a>

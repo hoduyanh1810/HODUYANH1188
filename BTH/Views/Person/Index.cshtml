@@ -1,0 +1,19 @@
+@model BTH.Models.Person
+
+@{
+    ViewData["Title"] = "Nhập thông tin";
+}
+
+<h2>Nhập thông tin người</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Họ và tên:</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div>
+        <label>Năm sinh:</label>
+        <input asp-for="YearOfBirth" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Xem thông tin</button>
+</form>

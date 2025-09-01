@@ -1,0 +1,14 @@
+@model BTH.Models.BMI
+
+@{
+    ViewData["Title"] = "Kết quả BMI";
+}
+
+<h2>Kết quả BMI</h2>
+
+<p><strong>Chiều cao:</strong> @Model.Height m</p>
+<p><strong>Cân nặng:</strong> @Model.Weight kg</p>
+<p><strong>Chỉ số BMI:</strong> @Model.Result.ToString("0.00")</p>
+<p><strong>Phân loại:</strong> @Model.Category</p>
+
+<a asp-action="Index" class="btn btn-primary">Tính lại</a>

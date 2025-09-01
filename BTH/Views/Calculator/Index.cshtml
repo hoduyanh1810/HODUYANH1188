@@ -1,0 +1,28 @@
+@model BTH.Models.Calculator
+
+@{
+    ViewData["Title"] = "Máy tính đơn giản";
+}
+
+<h2>Máy tính</h2>
+
+<form asp-action="Index" method="post">
+    <div>
+        <label>Số thứ nhất:</label>
+        <input asp-for="Number1" class="form-control" />
+    </div>
+    <div>
+        <label>Số thứ hai:</label>
+        <input asp-for="Number2" class="form-control" />
+    </div>
+    <div>
+        <label>Chọn phép tính:</label>
+        <select asp-for="Operation" class="form-control">
+            <option value="add">Cộng</option>
+            <option value="sub">Trừ</option>
+            <option value="mul">Nhân</option>
+            <option value="div">Chia</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Tính</button>
+</form>

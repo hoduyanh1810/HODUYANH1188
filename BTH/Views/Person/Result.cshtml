@@ -1,0 +1,13 @@
+@model BTH.Models.Person
+
+@{
+    ViewData["Title"] = "Kết quả";
+}
+
+<h2>Thông tin người dùng</h2>
+
+<p><strong>Họ và tên:</strong> @Model.Name</p>
+<p><strong>Năm sinh:</strong> @Model.YearOfBirth</p>
+<p><strong>Tuổi:</strong> @Model.Age</p>
+
+<a asp-action="Index">Quay lại</a>
