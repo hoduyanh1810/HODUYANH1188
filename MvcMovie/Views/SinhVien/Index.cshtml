@@ -1,0 +1,33 @@
+@model IEnumerable<MvcMovie.Models.SinhVien>
+
+@{
+    ViewData["Title"] = "Quản lý sinh viên";
+}
+
+<h1>Quản lý sinh viên</h1>
+<p><a asp-action="Create" class="btn btn-primary">Thêm sinh viên</a></p>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Mã sinh viên</th>
+            <th>Họ tên</th>
+            <th>Khoa</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MaSinhVien</td>
+            <td>@item.HoTen</td>
+            <td>@item.Khoa?.TenKhoa</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.MaSinhVien" class="btn btn-sm btn-warning">Sửa</a>
+                <a asp-action="Delete" asp-route-id="@item.MaSinhVien" class="btn btn-sm btn-danger">Xóa</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
